@@ -28,7 +28,7 @@ kenaikan_berat_text = st.selectbox(
 # =========================
 # MAPPING KE MODEL
 # =========================
-jenis_kelamin = 1 if jenis_kelamin_text == "Laki-laki" else 2
+jenis_kelamin = 1 if jenis_kelamin_text == "Laki-laki" else 0
 kenaikan_berat = 1 if "T" in kenaikan_berat_text else 0
 usia_hari = usia_bulan * 30.4375
 

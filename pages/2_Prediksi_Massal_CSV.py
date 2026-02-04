@@ -57,8 +57,7 @@ if uploaded_file is not None:
         df_csv = pd.read_excel(uploaded_file)
 
 
-    # DROP KOLOM TIDAK DIPAKAI
-    df_csv = df_csv.drop(columns=["usia_hari", "status_gizi", "z_score"], errors="ignore")
+
 
     # buat usia_hari dari usia
     if "usia" in df_csv.columns:
@@ -81,7 +80,7 @@ if uploaded_file is not None:
           .astype(str)
           .str.strip()
           .str.upper()
-          .replace({"L": 1, "P": 0})
+          .replace({"L": 1, "P": 2})
     )
 
     if "kenaikan_berat" in df_csv.columns:
